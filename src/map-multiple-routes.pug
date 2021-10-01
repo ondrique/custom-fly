@@ -1,0 +1,27 @@
+extends _pug-includes/layout.pug
+
+block vars 
+    - var active = 'category'
+    - var mapUsed = true
+    - var hideTopbar = true
+
+block content
+
+    .container.py-5
+        h1.text-serif.mb-4 Map with multiple routes
+
+        #categoryMap(style="height: 500px;")
+
+
+block additionalScripts
+    include _pug-includes/scripts-map.pug
+
+    script(src='js/map-custom.js')                                
+    script.
+        createListingsMap({
+            mapId: 'categoryMap',
+            jsonFile: 'js/map-multiple-routes-geojson.json',
+            pointPopupType: 'rental',
+            linePopupType: 'flight'
+            //tileLayer: tileLayers[5]  - uncomment for a different map styling
+        });

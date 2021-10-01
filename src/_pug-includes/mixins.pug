@@ -1,0 +1,5 @@
+mixin svgIcon(icon, iconClass)
+    if (!iconClass)
+        - iconClass = ''
+    svg.svg-icon(class=iconClass)
+        use(xlink:href='#' + icon)  

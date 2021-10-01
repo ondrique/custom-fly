@@ -1,0 +1,31 @@
+extends _pug-includes/layout.pug
+
+block vars
+    - var active = 'detail'  
+    - var navbarClass = ''  
+    - var headerClass = ''  
+    - var mapUsed = true
+
+block content
+
+    .container
+        h1.text-serif.mb-4 Detail Map
+
+        .map-wrapper-300.mb-3
+            #detailMap.h-100
+
+
+block additionalScripts
+    include _pug-includes/scripts-map.pug
+    
+    script(src='js/map-detail.js')
+
+    script.
+        createDetailMap({
+            mapId: 'detailMap',
+            mapCenter: [40.732346, -74.0014247],
+            markerShow: true,
+            markerPosition: [40.732346, -74.0014247],
+            markerPath: 'img/marker.svg',
+        })
+    

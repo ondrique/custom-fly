@@ -1,0 +1,161 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke": "#D21209",
+                "stroke-width": 1.5,
+                "stroke-opacity": 1,
+                "price": "Kr 458 p.p.",
+                "logo": "http://placehold.it/32x32",
+                "image": "restaurant-1505275350441-83dcda8eeef5.jpg",
+                "link": "detail.html",
+                "url": "#",
+                "marker": "img/marker-plane.svg",
+                "name": "Fly over Stockholm",
+                "category": "Flights",
+                "email": "biancabriggs@prosure.com",
+                "about": "Cillum sunt reprehenderit ea non irure veniam dolore commodo labore fugiat est consequat velit. Cupidatat nisi qui ad sit ut labore id esse tempor proident enim exercitation est aliquip. Ipsum deserunt dolor proident sunt ut proident esse do pariatur duis incididunt id ullamco. Dolore proident consectetur dolor irure mollit commodo sunt dolore.  \r\n"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [18.057403564453125, 59.32758544549431],
+                    [18.36090087890625, 59.145656642731254],
+                    [18.510589599609375, 59.39617055437113],
+                    [18.057403564453125, 59.32758544549431]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke": "#D21209",
+                "stroke-width": 1.5,
+                "stroke-opacity": 1,
+                "price": "Kr 1000 p.p.",
+                "logo": "http://placehold.it/32x32",
+                "image": "restaurant-1505275350441-83dcda8eeef5.jpg",
+                "link": "detail.html",
+                "url": "#",
+                "marker": "img/marker-plane.svg",
+                "name": "Fly over Stockholm",
+                "category": "Flights",
+                "email": "biancabriggs@prosure.com",
+                "about": "Cillum sunt reprehenderit ea non irure veniam dolore commodo labore fugiat est consequat velit. Cupidatat nisi qui ad sit ut labore id esse tempor proident enim exercitation est aliquip. Ipsum deserunt dolor proident sunt ut proident esse do pariatur duis incididunt id ullamco. Dolore proident consectetur dolor irure mollit commodo sunt dolore.  \r\n"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [18.057403564453125, 59.32758544549431],
+                    [18.30047607421875, 59.23849837508385],
+                    [18.312835693359375, 59.331088041989965],
+                    [18.057403564453125, 59.32793572139082]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "59c0c8e39aa2edasd626e485d",
+                "index": 5,
+                "isActive": true,
+                "logo": "http://placehold.it/32x32",
+                "image": "restaurant-1505275350441-83dcda8eeef5.jpg",
+                "link": "detail.html",
+                "url": "#",
+                "marker": "img/marker-helicopter.svg",
+                "name": "Fly over Stockholm",
+                "category": "Flights",
+                "email": "biancabriggs@prosure.com",
+                "stars": 4,
+                "phone": "+1 (831) 587-2089",
+                "address": "942 Greenpoint Avenue, Northridge, Puerto Rico, 8248",
+                "about": "Cillum sunt reprehenderit ea non irure veniam dolore commodo labore fugiat est consequat velit. Cupidatat nisi qui ad sit ut labore id esse tempor proident enim exercitation est aliquip. Ipsum deserunt dolor proident sunt ut proident esse do pariatur duis incididunt id ullamco. Dolore proident consectetur dolor irure mollit commodo sunt dolore.  \r\n",
+                "tags": ["Nisi", "Ex", "Eiusmod"]
+            },
+            "geometry": { "type": "Point", "coordinates": [18.057403564453125, 59.32758544549431] }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke": "#D21209",
+                "stroke-width": 1.5,
+                "stroke-opacity": 1,
+                "price": "Kr 786 p.p.",
+                "logo": "http://placehold.it/32x32",
+                "image": "restaurant-1505275350441-83dcda8eeef5.jpg",
+                "link": "detail.html",
+                "url": "#",
+                "marker": "img/marker-plane.svg",
+                "name": "Fly over Stockholm",
+                "category": "Flights",
+                "email": "biancabriggs@prosure.com",
+                "about": "Cillum sunt reprehenderit ea non irure veniam dolore commodo labore fugiat est consequat velit. Cupidatat nisi qui ad sit ut labore id esse tempor proident enim exercitation est aliquip. Ipsum deserunt dolor proident sunt ut proident esse do pariatur duis incididunt id ullamco. Dolore proident consectetur dolor irure mollit commodo sunt dolore.  \r\n"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [18.277130126953125, 59.48902881829867],
+                    [18.170013427734375, 59.3289865274175],
+                    [18.461151123046875, 59.16537142887627],
+                    [18.757781982421875, 59.48902881829867],
+                    [18.277130126953125, 59.48902881829867]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke": "#D21209",
+                "stroke-width": 1.5,
+                "stroke-opacity": 1,
+                "price": "Kr 963 p.p.",
+                "logo": "http://placehold.it/32x32",
+                "image": "restaurant-1505275350441-83dcda8eeef5.jpg",
+                "link": "detail.html",
+                "url": "#",
+                "marker": "img/marker-plane.svg",
+                "name": "Fly over Stockholm",
+                "category": "Flights",
+                "email": "biancabriggs@prosure.com",
+                "about": "Cillum sunt reprehenderit ea non irure veniam dolore commodo labore fugiat est consequat velit. Cupidatat nisi qui ad sit ut labore id esse tempor proident enim exercitation est aliquip. Ipsum deserunt dolor proident sunt ut proident esse do pariatur duis incididunt id ullamco. Dolore proident consectetur dolor irure mollit commodo sunt dolore.  \r\n"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [18.277130126953125, 59.48902881829867],
+                    [18.606719970703125, 59.19210904473387],
+                    [18.809967041015625, 59.43320477511503],
+                    [18.277130126953125, 59.48902881829867]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.277130126953125, 59.48902881829867]
+            },
+            "properties": {
+                "id": "59c0c8e39aa2edasd626e485d",
+                "index": 5,
+                "isActive": true,
+                "logo": "http://placehold.it/32x32",
+                "image": "restaurant-1505275350441-83dcda8eeef5.jpg",
+                "link": "detail.html",
+                "url": "#",
+                "marker": "img/marker-helicopter.svg",
+                "name": "Fly over Stockholm",
+                "category": "Flights",
+                "email": "biancabriggs@prosure.com",
+                "stars": 4,
+                "phone": "+1 (831) 587-2089",
+                "address": "942 Greenpoint Avenue, Northridge, Puerto Rico, 8248",
+                "about": "Cillum sunt reprehenderit ea non irure veniam dolore commodo labore fugiat est consequat velit. Cupidatat nisi qui ad sit ut labore id esse tempor proident enim exercitation est aliquip. Ipsum deserunt dolor proident sunt ut proident esse do pariatur duis incididunt id ullamco. Dolore proident consectetur dolor irure mollit commodo sunt dolore.  \r\n",
+                "tags": ["Nisi", "Ex", "Eiusmod"]
+            }
+        }
+    ]
+}

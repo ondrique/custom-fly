@@ -1,0 +1,36 @@
+mixin ie(condition)
+  <!--[!{condition}]>
+  block
+  <![endif]-->
+
+meta(charset='utf-8')
+meta(http-equiv='X-UA-Compatible', content='IE=edge')
+title Bootstrapious 5 Boilerplate
+meta(name='description', content='')
+meta(name='viewport', content='width=device-width, initial-scale=1')
+if (locals.noIndex)
+    meta(name='robots', content='noindex')
+else
+    meta(name='robots', content='all,follow')
+
+if (mapUsed)
+    // Leaflet Maps
+    link(rel='stylesheet', href='https://unpkg.com/leaflet@1.5.1/dist/leaflet.css',
+  integrity='sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==', crossorigin='')
+
+// Google fonts
+link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,700')
+
+// Theme stylesheet
+link(rel='stylesheet', href='css/style.default.css', id='theme-stylesheet')
+
+// Custom stylesheet - for your changes
+link(rel='stylesheet', href='css/custom.css')
+
+// Favicon
+link(rel='shortcut icon', href='favicon.png')
+
+// Tweaks for older IEs
++ie('if lt IE 9')
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')

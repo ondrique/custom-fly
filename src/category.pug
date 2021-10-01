@@ -1,0 +1,26 @@
+extends _pug-includes/layout.pug
+
+block vars 
+    - var active = 'category'
+    - var mapUsed = true
+    - var hideTopbar = true
+
+block content
+
+    .container
+        h1.text-serif.mb-4 Category Map
+
+        #categoryMap(style="height: 500px;")
+
+
+
+block additionalScripts
+    include _pug-includes/scripts-map.pug
+
+    script(src='js/map-category.js')                                
+    script.
+        createListingsMap({
+            mapId: 'categoryMap',
+            jsonFile: 'js/restaurants-geojson.json',
+            //tileLayer: tileLayers[5]  - uncomment for a different map styling
+        });

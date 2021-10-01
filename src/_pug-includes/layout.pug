@@ -1,0 +1,26 @@
+include mixins.pug 
+
+doctype
+html
+  block vars
+
+  if (!path)
+    - var path = ''
+
+  head
+    include head.pug
+
+  body
+
+    include navbar.pug
+
+    block content
+
+    include footer.pug
+
+    if (locals.styleSwitcher)
+      include style-switcher.pug
+
+    include scripts.pug
+
+    block additionalScripts    

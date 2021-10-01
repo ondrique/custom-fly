@@ -1,0 +1,289 @@
+extends _pug-includes/layout
+
+block content
+        
+    .container.py-5
+            
+        h1 Bootstrap(ious) 5 Boilerplate
+        p This is a sample content.
+    
+        .jumbotron
+            h1 Kitchen Sink
+            p A quick preview of everything Bootstrap has to offer.
+            p
+                a.btn.btn-primary.btn-large(href="#") Learn more »
+                | 
+                a.btn.btn-outline-primary.btn-large(href="#") Learn more »
+        .row
+            .col-lg-6
+                #headings.card.mb-4
+                    .card-header Headings
+                    .card-body
+                        h1 This is an h1 heading
+                        h2 This is an h2 heading
+                        h3 This is an h3 heading
+                        h4 This is an h4 heading
+                        h5 This is an h5 heading
+                        h6 This is an h6 heading
+                .card.mb-4
+                    .card-header Icons
+                    .card-body
+                        +svgIcon('speed-1')
+                        +svgIcon('muffin-1', 'text-primary')
+                        +svgIcon('first-aid-kit-1', 'text-muted')
+                        br
+                        +svgIcon('sedan-1', 'svg-icon-big svg-icon-light')
+
+
+                #tables.card.mb-4
+                    .card-header
+                        | Tables
+                    .card-body
+                        table.table.table-hover
+                            thead
+                                tr
+                                    th #
+                                    th First Name
+                                    th Tables
+                            tbody
+                                tr
+                                    td 1
+                                    td Michael
+                                    td Are formatted like this
+                                tr
+                                    td 2
+                                    td Lucille
+                                    td Do you like them?
+                                tr.table-success
+                                    td 3
+                                    td Success
+                                    td
+                                tr.table-danger
+                                    td 4
+                                    td Danger
+                                    td
+                                tr.table-warning
+                                    td 5
+                                    td Warning
+                                    td
+                                tr.table-active
+                                    td 6
+                                    td Active
+                                    td
+                        table.table.table-bordered
+                            thead
+                                tr
+                                    th #
+                                    th First Name
+                                    th Tables
+                            tbody
+                                tr.table-active
+                                    td 1
+                                    td Michael
+                                    td This one is bordered and condensed
+                                tr
+                                    td 2
+                                    td Lucille
+                                    td Do you still like it?
+            .col-lg-6
+                #content-formatting.card.mb-4
+                    .card-header
+                        | Content Formatting
+                    .card-body
+                        p.lead This is a lead paragraph.
+                        p
+                            | This is an 
+                            b ordinary paragraph
+                            |  that is 
+                            i long enough
+                            |  to wrap to 
+                            u multiple lines
+                            |  so that you can see how the line spacing looks.
+                        p.text-muted Muted color paragraph.
+                        p.text-warning Warning color paragraph.
+                        p.text-danger Danger color paragraph.
+                        p.text-info Info color paragraph.
+                        p.text-primary Primary color paragraph.
+
+                        nav(aria-label='...')
+                            ul.pagination
+                                li.page-item.disabled
+                                    span.page-link Previous
+                                li.page-item
+                                    a.page-link(href='#') 1
+                                li.page-item.active
+                                    span.page-link
+                                        | 2
+                                        span.visually-hidden (current)
+                                li.page-item
+                                    a.page-link(href='#') 3
+                                li.page-item
+                                    a.page-link(href='#') Next
+
+                        p
+                            small
+                                | This is text in a 
+                                code small
+                                |  wrapper. 
+                                abbr(title='No Big Deal') NBD
+                                | , right?
+                        hr
+                        address
+                            strong Twitter, Inc.
+                            br
+                            |  795 Folsom Ave, Suite 600
+                            br
+                            |  San Francisco, CA 94107
+                            br
+                            abbr(title='Phone') P:
+                            |  (123) 456-7890
+                        address.col-6
+                            strong Full Name
+                            br
+                            a(href='mailto:#') first.last@example.com
+                        hr
+                        blockquote
+                            | Here's what a blockquote looks like in Bootstrap.
+                            small
+                                | Use 
+                                code small
+                                |  to identify the source.
+                        hr
+                        .row
+                            .col-xs-6
+                                ul
+                                    li Normal Unordered List
+                                    li
+                                        | Can Also Work
+                                        ul
+                                            li With Nested Children
+                                    li Adds Bullets to Page
+                            .col-xs-6
+                                ol
+                                    li Normal Ordered List
+                                    li
+                                        | Can Also Work
+                                        ol
+                                            li With Nested Children
+                                    li Adds Bullets to Page
+                        hr
+                        pre.
+                            \nfunction preFormatting() {  // looks like this;  var something = somethingElse;  return true;}                        
+        #forms.card.mb-4
+            .card-header
+                | Forms
+            .card-body
+                form
+                    .mb-3
+                        label.form-label(for='exampleInputEmail1') Email address
+                        input.form-control#exampleInputEmail1(type='email', aria-describedby='emailHelp')
+                        #emailHelp.form-text We'll never share your email with anyone else.
+                    .mb-3
+                        label.form-label(for='exampleInputPassword1') Password
+                        input.form-control#exampleInputPassword1(type='password')
+                    .mb-3.form-check
+                        input.form-check-input#exampleCheck1(type='checkbox')
+                        label.form-check-label(for='exampleCheck1') Check me out
+                    button.btn.btn-primary(type='submit') Submit
+                    
+                hr.my-5
+                h4.mb-5 Horizontal form
+                form.row.row-cols-lg-auto.g-3.align-items-center
+                    .col-12
+                        input.form-control(type='text', placeholder='Email')
+                        label.visually-hidden(for='inlineFormInputGroupUsername2') Username
+                    .col-12
+                        .input-group
+                            span.input-group-text @
+                            input#inlineFormInputGroupUsername2.form-control(type='text')       
+                    .col-12
+                        .form-check
+                            input#inlineFormCheck.form-check-input(type='checkbox')
+                            label.form-check-label(for='inlineFormCheck')
+                                | Remember me
+                    .col-12
+                        button.btn.btn-primary(type='submit') Submit
+                hr.my-5
+                h4.mb-5 Horizontal form
+                form
+                    .row.mb-3
+                        label.col-sm-2.col-form-label(for='inputEmail3') Email
+                        .col-sm-10
+                            input.form-control#inputEmail3(type='email')
+                    .row.mb-3
+                        label.col-sm-2.col-form-label(for='inputPassword3') Password
+                        .col-sm-10
+                            input.form-control#inputPassword3(type='password')
+                    fieldset
+                        .row.mb-3
+                            legend.col-form-label.col-sm-2.pt-0 Radios
+                            .col-sm-10
+                                .form-check
+                                    input.form-check-input#gridRadios1(type='radio', name='gridRadios', value='option1', checked)
+                                    label.form-check-label(for='gridRadios1').
+                                        
+                                        First radio
+                                        
+                                .form-check
+                                    input.form-check-input#gridRadios2(type='radio', name='gridRadios', value='option2')
+                                    label.form-check-label(for='gridRadios2').
+                                        
+                                        Second radio
+                                        
+                                .form-check.disabled
+                                    input.form-check-input#gridRadios3(type='radio', name='gridRadios', value='option3', disabled)
+                                    label.form-check-label(for='gridRadios3').
+                                        
+                                        Third disabled radio
+                                        
+                    .row.mb-3
+                        .col-form-label.col-sm-2.pt-0 Checkbox
+                        .col-sm-10
+                            .form-check
+                                input.form-check-input#gridCheck1(type='checkbox')
+                                label.form-check-label(for='gridCheck1').
+                                    
+                                    Example checkbox
+                                    
+                    button.btn.btn-primary(type='submit') Sign in
+
+        #buttons.card.mb-4
+            .card-header
+                | Buttons
+            .card-body
+                p
+                    button.btn.btn-lg.btn-secondary(type='button') Default Lg
+                    button.btn.btn-lg.btn-primary(type='button') Primary
+                    button.btn.btn-lg.btn-success(type='button') Success
+                    button.btn.btn-lg.btn-info(type='button') Info
+                    button.btn.btn-lg.btn-warning(type='button') Warning
+                    button.btn.btn-lg.btn-danger(type='button') Danger
+                    button.btn.btn-lg.btn-link(type='button') Link
+                p
+                    button.btn.btn-secondary(type='button') Default 
+                    button.btn.btn-primary(type='button') Primary
+                    button.btn.btn-success(type='button') Success
+                    button.btn.btn-info(type='button') Info
+                    button.btn.btn-warning(type='button') Warning
+                    button.btn.btn-danger(type='button') Danger
+                    button.btn.btn-link(type='button') Link
+                p
+                    button.btn.btn-sm.btn-secondary(type='button') Default Sm
+                    button.btn.btn-sm.btn-primary(type='button') Primary
+                    button.btn.btn-sm.btn-success(type='button') Success
+                    button.btn.btn-sm.btn-info(type='button') Info
+                    button.btn.btn-sm.btn-warning(type='button') Warning
+                    button.btn.btn-sm.btn-danger(type='button') Danger
+                    button.btn.btn-sm.btn-link(type='button') Link
+        .card
+            .card-header Button dropdown
+            .card-body
+                .dropdown
+                    button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Dropdown button
+                    .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                        a.dropdown-item(href='#') Action
+                        a.dropdown-item(href='#') Another action
+                        a.dropdown-item(href='#') Something else here
+    
+        

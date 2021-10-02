@@ -77,7 +77,7 @@ function createListingsMap(options) {
 
             if (markersGroup) {
                 var featureGroup = new L.featureGroup(markersGroup);
-                map.fitBounds(featureGroup.getBounds());
+                map.fitBounds(featureGroup.getBounds(), { padding: [20, 20] });
             }
         } else {
             // We reached our target server, but it returned an error
@@ -108,36 +108,53 @@ function createListingsMap(options) {
                 popupAnchor: [0, -35],
                 iconAnchor: [13, 38],
                 tooltipAnchor: [0, 19],
-                ...(settings.interactivity && { className: "marker-hover-effect" }),
+                ...(settings.interactivity && {
+                    className: "marker-hover-effect",
+                }),
             };
             var highlightIcon = Object.assign({}, defaultIcon);
             highlightIcon.iconSize = [28, 42];
             highlightIcon.iconAnchor = [13, 43];
 
-            // if (settings.interactivity) {
-            //     layer.on({
-            //         mouseover: highlight,
-            //         mouseout: reset,
-            //     });
-            // }
+            if (settings.interactivity) {
+                layer.on({
+                    mouseover: highlight,
+                    mouseout: reset,
+                });
+            }
         }
 
         // Set Line style, change it on hover
         if (feature.properties && feature.geometry.type == "LineString") {
             // Route default style
             var defaultRouteStyle = {
-                ...(feature.properties["fill"] !== null && { fillColor: feature.properties["fill"] }),
-                ...(feature.properties["fill-opacity"] !== null && { fillOpacity: feature.properties["fill-opacity"] }),
-                ...(feature.properties["stroke-opacity"] !== null && { opacity: feature.properties["stroke-opacity"] }),
-                ...(feature.properties["stroke-width"] !== null && { weight: feature.properties["stroke-width"] }),
-                ...(feature.properties["stroke"] !== null && { color: feature.properties["stroke"] }),
+                ...(feature.properties["fill"] !== null && {
+                    fillColor: feature.properties["fill"],
+                }),
+                ...(feature.properties["fill-opacity"] !== null && {
+                    fillOpacity: feature.properties["fill-opacity"],
+                }),
+                ...(feature.properties["stroke-opacity"] !== null && {
+                    opacity: feature.properties["stroke-opacity"],
+                }),
+                ...(feature.properties["stroke-width"] !== null && {
+                    weight: feature.properties["stroke-width"],
+                }),
+                ...(feature.properties["stroke"] !== null && {
+                    color: feature.properties["stroke"],
+                }),
             };
 
             layer.setStyle(defaultRouteStyle);
 
             if (settings.interactivity) {
                 layer.addEventListener("mouseover", function () {
-                    this.setStyle({ fillOpacity: 0.08, fillColor: "#D21209", weight: 3.5, color: "#A50700" });
+                    this.setStyle({
+                        fillOpacity: 0.08,
+                        fillColor: "#D21209",
+                        weight: 3.5,
+                        color: "#A50700",
+                    });
                 });
                 layer.addEventListener("mouseout", function () {
                     this.setStyle(defaultRouteStyle);
@@ -145,24 +162,44 @@ function createListingsMap(options) {
             }
         }
 
-        if (feature.properties && feature.properties.about && settings.interactivity === true) {
-            if (feature.geometry.type === "Point" && feature.properties.isActive) {
-                layer.bindPopup(getPopupContent(feature.properties, settings.pointPopupType), {
-                    minwidth: 200,
-                    maxWidth: 600,
-                    className: "map-custom-popup",
-                });
+        if (
+            feature.properties &&
+            feature.properties.about &&
+            settings.interactivity === true
+        ) {
+            if (
+                feature.geometry.type === "Point" &&
+                feature.properties.isActive
+            ) {
+                layer.bindPopup(
+                    getPopupContent(
+                        feature.properties,
+                        settings.pointPopupType
+                    ),
+                    {
+                        minwidth: 200,
+                        maxWidth: 600,
+                        className: "map-custom-popup",
+                    }
+                );
             } else if (feature.geometry.type === "LineString") {
-                layer.bindPopup(getPopupContent(feature.properties, settings.linePopupType), {
-                    minwidth: 200,
-                    maxWidth: 600,
-                    className: "map-custom-popup",
-                });
+                layer.bindPopup(
+                    getPopupContent(feature.properties, settings.linePopupType),
+                    {
+                        minwidth: 200,
+                        maxWidth: 600,
+                        className: "map-custom-popup",
+                    }
+                );
             }
 
             if (settings.useTextIcon) {
                 layer.bindTooltip(
-                    '<div id="customTooltip-' + feature.properties.id + '">$' + feature.properties.price + "</div>",
+                    '<div id="customTooltip-' +
+                        feature.properties.id +
+                        '">$' +
+                        feature.properties.price +
+                        "</div>",
                     {
                         direction: "top",
                         permanent: true,
@@ -206,7 +243,9 @@ function createListingsMap(options) {
                 popupAnchor: [0, -35],
                 iconAnchor: [13, 38],
                 tooltipAnchor: [0, 19],
-                ...(settings.interactivity && { className: "marker-hover-effect" }),
+                ...(settings.interactivity && {
+                    className: "marker-hover-effect",
+                }),
             }),
             id: feature.properties.id,
             opacity: markerOpacity,
@@ -306,13 +345,21 @@ function createListingsMap(options) {
         }
 
         if (properties.url) {
-            var url = '<a href="' + properties.url + '">' + properties.url + "</a><br>";
+            var url =
+                '<a href="' +
+                properties.url +
+                '">' +
+                properties.url +
+                "</a><br>";
         } else {
             url = "";
         }
 
         if (properties.price) {
-            var price = '<p class="text-sm mb-0">from <strong class="fw-bold">' + properties.price + "</strong></p>";
+            var price =
+                '<p class="text-sm mb-0">from <strong class="fw-bold">' +
+                properties.price +
+                "</strong></p>";
         } else {
             price = "";
         }
@@ -333,10 +380,22 @@ function createListingsMap(options) {
                 "</div>";
         } else if (layerType == "rental") {
             popupContent =
-                '<div class="popup-rental">' + image + '<div class="text">' + title + address + "</div>" + "</div>";
+                '<div class="popup-rental">' +
+                image +
+                '<div class="text">' +
+                title +
+                address +
+                "</div>" +
+                "</div>";
         } else if (layerType == "flight") {
             popupContent =
-                '<div class="popup-rental">' + image + '<div class="text">' + title + price + "</div>" + "</div>";
+                '<div class="popup-rental">' +
+                image +
+                '<div class="text">' +
+                title +
+                price +
+                "</div>" +
+                "</div>";
         }
 
         return popupContent;
@@ -363,7 +422,9 @@ function createListingsMap(options) {
         },
     });
 
-    const markerIds = document.querySelectorAll('[data-marker-id]:not([data-marker-id=""]');
+    const markerIds = document.querySelectorAll(
+        '[data-marker-id]:not([data-marker-id=""]'
+    );
     markerIds.forEach(function (el) {
         if (el) {
             el.addEventListener("mouseenter", function () {
